@@ -12,3 +12,4 @@
 /Users/emrahisik/Documents/CSharp/HelloWorld/obj/Debug/net8.0/HelloWorld.pdb
 /Users/emrahisik/Documents/CSharp/HelloWorld/obj/Debug/net8.0/HelloWorld.genruntimeconfig.cache
 /Users/emrahisik/Documents/CSharp/HelloWorld/obj/Debug/net8.0/ref/HelloWorld.dll
+/Users/emrahisik/Documents/CSharp/HelloWorld/obj/Debug/net8.0/HelloWorld.sourcelink.json
