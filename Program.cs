@@ -53,8 +53,20 @@ namespace HelloWorld
       // // Boolean
       // bool myBool = true;
 
+      // Arrays
       string[] myGroceryArray = new string[2];
-      Console.WriteLine(myGroceryArray.GetType());
+      myGroceryArray[0] = "Broccoli";
+      Console.WriteLine(myGroceryArray[0]);
+      Console.WriteLine(myGroceryArray[1]);
+
+      string[] myFruits = ["Apples", "Pears"]; // Old version => string[] myFruits = {"Apples", "Pears"};
+      // myFruits[2] = "";
+      Console.WriteLine(myFruits[0]);
+      Console.WriteLine(myFruits[1]);
+      // Console.WriteLine(myFruits[2]);
+
+      // Lists
+      List<string> myList = []; // Old version => List<string> myList = new List<string>()
     }
   }
 }
