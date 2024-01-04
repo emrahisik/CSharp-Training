@@ -36,6 +36,8 @@ namespace HelloWorld
       // Dictionary
       Dictionary<string,string[]> groceryMap = new(){{"Diary", new string[]{"Cheeese", "Milk", "Eggs"}}}; // Old version = new Dictionary<string, string[]>(){{"Diary", new string[]{"Cheeese", "Milk"}}};
       Console.WriteLine(groceryMap["Diary"][2]);
+      groceryMap["Diary"][2] = "Yoghurt";
+      Console.WriteLine(groceryMap["Diary"][2]);
     }
   }
 }
