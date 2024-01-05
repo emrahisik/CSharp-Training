@@ -6,38 +6,34 @@ namespace HelloWorld
   {
     static void Main(string[] args)
     {
-      // Arrays
-      string[] myGroceryArray = new string[2];
-      myGroceryArray[0] = "Broccoli";
-      Console.WriteLine(myGroceryArray[0]);
-      Console.WriteLine(myGroceryArray[1]);
+      int firstInt = 5;
+      int secondInt = 10;
+      int resOne = firstInt++;
+      Console.WriteLine(firstInt);
+      int resTwo = ++firstInt;
+      Console.WriteLine(resOne);
+      Console.WriteLine(resTwo);
 
-      string[] myFruits = ["Apples", "Pears"]; // Old version => string[] myFruits = {"Apples", "Pears"};
-      // myFruits[2] = "";
-      Console.WriteLine(myFruits[0]);
-      Console.WriteLine(myFruits[1]);
-      Console.WriteLine(myFruits.GetType());
-      // Console.WriteLine(myFruits[2]);
+      Console.WriteLine(Math.Pow(5,4));
+      Console.WriteLine(Math.Sqrt(5)==Math.Pow(5,0.5));
+      Console.WriteLine(Math.Max(34,4));
 
-      // Lists
-      List<string> myGroceryList = ["Asparagus", "Milk", "Eggs"]; // Old version => List<string> myList = new List<string>()
-      Console.WriteLine($"{myGroceryList[0]}, {myGroceryList[2]}");
-      myGroceryList.Add("Tomatoes");
-      Console.WriteLine($"{myGroceryList[0]}, {myGroceryList[3]}");
+      string test = "test";
+      Console.WriteLine(test);
 
-      // IEnumerable
-      IEnumerable<string> myGroceryIEnum = myGroceryList; 
-      Console.WriteLine(myGroceryIEnum.Last());
+      test += " concatinate";
+      Console.WriteLine(test);
 
-      // 2D array
-      string[,] myTwoDimentionalArray = {{"apples", "pears", "bananas"},{"eggs", "milk", "cheese"}};
-      Console.WriteLine (myTwoDimentionalArray[1,2]);
+      string quote = " \"third\""; // Backslash to escape from quote error
+      test += quote;
+      Console.WriteLine(test);
 
-      // Dictionary
-      Dictionary<string,string[]> groceryMap = new(){{"Diary", new string[]{"Cheeese", "Milk", "Eggs"}}}; // Old version = new Dictionary<string, string[]>(){{"Diary", new string[]{"Cheeese", "Milk"}}};
-      Console.WriteLine(groceryMap["Diary"][2]);
-      groceryMap["Diary"][2] = "Yoghurt";
-      Console.WriteLine(groceryMap["Diary"][2]);
+      string[] testArray = test.Split(" ");
+      for (int i = 0; i < testArray.Length; i++)
+      {
+        Console.WriteLine($"{testArray[i]}");
+      }
+      
     }
   }
 }
