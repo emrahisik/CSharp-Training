@@ -6,38 +6,30 @@ namespace HelloWorld
   {
     static void Main(string[] args)
     {
-      // Arrays
-      string[] myGroceryArray = new string[2];
-      myGroceryArray[0] = "Broccoli";
-      Console.WriteLine(myGroceryArray[0]);
-      Console.WriteLine(myGroceryArray[1]);
+      int[] intsToCompress = new int[]{10,15,20,25,30,35};
+      IEnumerable<int> comp = intsToCompress;
+      Console.WriteLine(comp.LongCount()); // Length of Ienum
 
-      string[] myFruits = ["Apples", "Pears"]; // Old version => string[] myFruits = {"Apples", "Pears"};
-      // myFruits[2] = "";
-      Console.WriteLine(myFruits[0]);
-      Console.WriteLine(myFruits[1]);
-      Console.WriteLine(myFruits.GetType());
-      // Console.WriteLine(myFruits[2]);
+      int sum = 0;
+      DateTime f = DateTime.Now;
+      for(int i=0; i<intsToCompress.Length; i++)
+      {
+        sum+=intsToCompress[i];
+      }
 
-      // Lists
-      List<string> myGroceryList = ["Asparagus", "Milk", "Eggs"]; // Old version => List<string> myList = new List<string>()
-      Console.WriteLine($"{myGroceryList[0]}, {myGroceryList[2]}");
-      myGroceryList.Add("Tomatoes");
-      Console.WriteLine($"{myGroceryList[0]}, {myGroceryList[3]}");
+      Console.WriteLine(DateTime.Now-f);
 
-      // IEnumerable
-      IEnumerable<string> myGroceryIEnum = myGroceryList; 
-      Console.WriteLine(myGroceryIEnum.Last());
 
-      // 2D array
-      string[,] myTwoDimentionalArray = {{"apples", "pears", "bananas"},{"eggs", "milk", "cheese"}};
-      Console.WriteLine (myTwoDimentionalArray[1,2]);
+      // Using IEnumerable with foreach
 
-      // Dictionary
-      Dictionary<string,string[]> groceryMap = new(){{"Diary", new string[]{"Cheeese", "Milk", "Eggs"}}}; // Old version = new Dictionary<string, string[]>(){{"Diary", new string[]{"Cheeese", "Milk"}}};
-      Console.WriteLine(groceryMap["Diary"][2]);
-      groceryMap["Diary"][2] = "Yoghurt";
-      Console.WriteLine(groceryMap["Diary"][2]);
+      sum = 0;
+      f = DateTime.Now;
+      foreach (var num in comp)
+      {
+        sum+=num;
+      }
+      Console.WriteLine(DateTime.Now-f);
+      // Console.WriteLine(sum);
     }
   }
 }
