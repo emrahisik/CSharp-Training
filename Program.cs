@@ -6,30 +6,46 @@ namespace HelloWorld
   {
     static void Main(string[] args)
     {
-      int[] intsToCompress = new int[]{10,15,20,25,30,35};
-      IEnumerable<int> comp = intsToCompress;
-      Console.WriteLine(comp.LongCount()); // Length of Ienum
+      int[] numbersArray = new int[] { 10, 15, 20, 25, 30, 35 };
+      IEnumerable<int> numbarsArrayEnumerated
+       = numbersArray;
+      Console.WriteLine(numbarsArrayEnumerated
+      .LongCount()); // Length of Ienum
 
       int sum = 0;
-      DateTime f = DateTime.Now;
-      for(int i=0; i<intsToCompress.Length; i++)
+      DateTime startTime = DateTime.Now;
+      for (int i = 0; i < numbersArray.Length; i++)
       {
-        sum+=intsToCompress[i];
+        sum += numbersArray[i];
       }
 
-      Console.WriteLine(DateTime.Now-f);
+      Console.WriteLine(DateTime.Now - startTime);
 
 
       // Using IEnumerable with foreach
 
       sum = 0;
-      f = DateTime.Now;
-      foreach (var num in comp)
+      startTime = DateTime.Now;
+      foreach (var num in numbarsArrayEnumerated
+      )
       {
-        sum+=num;
+        sum += num;
       }
-      Console.WriteLine(DateTime.Now-f);
-      // Console.WriteLine(sum);
+      Console.WriteLine(DateTime.Now - startTime);
+      Console.WriteLine(sum);
+
+
+      sum = 0;
+      startTime = DateTime.Now;
+      int index = 0;
+      while (index < numbersArray.Length)
+      {
+        sum += numbersArray[index];
+        Console.WriteLine(sum);
+        index++;
+      }
+      Console.WriteLine(DateTime.Now - startTime);
+
     }
   }
 }
